@@ -76,6 +76,7 @@ class Map extends Component {
     const subroute = turf.lineSlice(startingPoint, endingPoint, line);
     this.setState({ subroute, selectedStops: stops });
   }
+
   /**
    * sets stop sids based on selected stops.
    * Stores up to two stops sids. Used to draw subroutes
@@ -226,7 +227,8 @@ class Map extends Component {
               <p>ID: {this.state.popup.info.vid}</p>
               <p>Heading: {this.state.popup.info.heading}</p>
             </div>
-          </Popup>) : null}
+          </Popup>
+        ) : null}
         <DeckGL
           {...viewport}
           layers={routeLayers}
